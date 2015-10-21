@@ -7,52 +7,61 @@
     <p>{{artigo.texto}}</p>
 </section>
 -->
+<form name="artigoform" ng-controller="controlador as crtl"  ng-submit="crtl.salva()">
+    <div class="row">
+        <div class="3u">
+            <!-- Feature #1 -->
+            <section>
+                <a href="#" class="bordered-feature-image"><img src="images/pic01.jpg" alt="" /></a>
+                <h2>{{artigos[0].titulo}}({{artigos[0].assunto}})</h2>
+                <p>
+                    {{artigos[0].texto}}                                
+                </p>
+            </section>
+        </div>
+        <div class="3u">
 
-<div class="row">
-    <div class="3u">
-        <!-- Feature #1 -->
-        <section>
-            <a href="#" class="bordered-feature-image"><img src="images/pic01.jpg" alt="" /></a>
-            <h2>{{artigos[0].titulo}}({{artigos[0].assunto}})</h2>
-            <p>
-                {{artigos[0].texto}}                                
-            </p>
-        </section>
+            <!-- Feature #2 -->
+            <section>
+                <a href="#" class="bordered-feature-image"><img src="images/pic02.jpg" alt="" /></a>
+                <h2>{{artigos[1].titulo}}({{artigos[1].assunto}})</h2>
+                <p>
+                    {{artigos[1].texto}}
+                </p>
+            </section>
+
+        </div>
+        <div class="3u">
+
+            <!-- Feature #3 -->
+            <section>
+                <a href="#" class="bordered-feature-image"><img src="images/pic03.jpg" alt="" /></a>
+                <h2>{{artigos[2].titulo}}({{artigos[2].assunto}})</h2>
+                <p>
+                    {{artigos[2].texto}}
+                </p>
+            </section>
+
+        </div>
+        <div class="3u">
+
+            <!-- Feature #4 -->
+            <section>
+                <a href="#" class="bordered-feature-image"><img src="images/pic04.jpg" alt="" /></a>
+                <h2>{{artigos[3].titulo}}({{artigos[3].assunto}})</h2>
+                <p>
+                    {{artigos[3].texto}}
+                </p>
+            </section>
+
+        </div>
     </div>
-    <div class="3u">
 
-        <!-- Feature #2 -->
-        <section>
-            <a href="#" class="bordered-feature-image"><img src="images/pic02.jpg" alt="" /></a>
-            <h2>{{artigos[1].titulo}}({{artigos[1].assunto}})</h2>
-            <p>
-                {{artigos[1].texto}}
-            </p>
-        </section>
 
-    </div>
-    <div class="3u">
 
-        <!-- Feature #3 -->
-        <section>
-            <a href="#" class="bordered-feature-image"><img src="images/pic03.jpg" alt="" /></a>
-            <h2>{{artigos[2].titulo}}({{artigos[2].assunto}})</h2>
-            <p>
-                {{artigos[2].texto}}
-            </p>
-        </section>
 
-    </div>
-    <div class="3u">
+    <span>Título:</span><input type="text" ng-model="crtl.artigo.titulo"/>
+    <input type="submit" value="Salvar"/>
+    <span>Resutado:</span>{{resposta}}!
 
-        <!-- Feature #4 -->
-        <section>
-            <a href="#" class="bordered-feature-image"><img src="images/pic04.jpg" alt="" /></a>
-            <h2>{{artigos[3].titulo}}({{artigos[3].assunto}})</h2>
-            <p>
-                {{artigos[3].texto}}
-            </p>
-        </section>
-
-    </div>
-</div>
+</form>
